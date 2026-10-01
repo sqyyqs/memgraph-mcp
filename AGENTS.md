@@ -6,8 +6,8 @@ If `.agents/overlay/AGENTS.md` exists, follow it too; this file wins on conflict
 ## Project
 
 Semester research project (NIR). Python >= 3.12, uv, MLflow with a local SQLite store by default.
-Package `src/nir_project/` (rename once with `make rename NAME=<package>`). Experiments run as
-scripts: `uv run python -m nir_project --config configs/<name>.yaml`.
+Package `src/memgraph_mcp/` (rename once with `make rename NAME=<package>`). Experiments run as
+scripts: `uv run python -m memgraph_mcp --config configs/<name>.yaml`.
 
 ## Commands
 
