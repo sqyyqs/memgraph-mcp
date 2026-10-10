@@ -1,16 +1,16 @@
-"""Run one experiment: `uv run python -m nir_project --config configs/smoke.yaml`."""
+"""Run one experiment: `uv run python -m memgraph_mcp --config configs/smoke.yaml`."""
 
 import argparse
 from pathlib import Path
 
 from dotenv import load_dotenv
 
-from nir_project.config import load_settings
-from nir_project.pipeline import ExperimentConfig, run_experiment
+from memgraph_mcp.config import load_settings
+from memgraph_mcp.pipeline import ExperimentConfig, run_experiment
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(prog="nir_project", description=__doc__)
+    parser = argparse.ArgumentParser(prog="memgraph_mcp", description=__doc__)
     parser.add_argument("--config", type=Path, required=True, help="experiment config, YAML")
     args = parser.parse_args(argv)
 

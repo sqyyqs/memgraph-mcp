@@ -2,7 +2,29 @@
 
 [Русская версия](README.ru.md)
 
-Semester research project (NIR) started from the [lab template](https://github.com/Industrial-AI-Research-Lab/nir-project-template). Replace this paragraph with the purpose of the project: the question, the data, the expected result.
+An open MCP server for shared graph memory across multiple LLM agents is being developed on top of Neo4j. 
+The system supports storing facts with provenance information (agent, source, event time, and recording time), 
+temporal queries such as “state at time t,” retrieval of relevant subgraphs under a token-budget constraint, 
+and conflict detection when new facts are added.
+
+**Research question:** Can a shared graph memory system with provenance, temporal reasoning,
+and token-budget-aware context retrieval preserve answer quality while reducing context size
+and maintaining acceptable latency compared with existing solutions?
+
+**Data:** The evaluation will use the LoCoMo conversational memory benchmark. 
+The proposed system will be compared with Graphiti-MCP, Mem0, and a full-context baseline using the same open-source LLM.
+
+**Required outcome:** A tested MCP server with a documented API and a reproducible experimental setup. 
+The evaluation metrics will include answer quality measured by an LLM judge, tokens per query, p95 latency, 
+and precision of conflict detection. The success criterion is answer quality within 2 percentage points of Graphiti-MCP,
+no more than 70% of its token usage per query, and conflict-detection precision of at least 0.8.
+
+**Desired outcome:** Extend the comparison to Mem0^g and dense RAG, run experiments with three random seeds 
+and confidence intervals, and conduct ablation studies on temporal reasoning, subgraph retrieval versus full context, 
+token-budget size, and model choice.
+
+**Project artifacts:** An open repository with reproducible experiment runs, an MCP interface contract
+for platform agents, and a technical report.
 
 ## Quick start
 
